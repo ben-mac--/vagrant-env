@@ -134,4 +134,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Shares the app folder
   config.vm.synced_folder "apps", "/home/vagrant/apps/"
+  
+  # Flask Port
+  config.vm.network :forwarded_port, host: 5000, guest: 5000
+  
 end
